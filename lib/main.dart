@@ -19,32 +19,7 @@ class TestApp extends StatelessWidget {
         return MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
-            fontFamily: "Inter",
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color.fromRGBO(100, 24, 195, 1),
-            ),
-            inputDecorationTheme: const InputDecorationTheme(
-              border: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(12),
-                ),
-              ),
-              filled: true,
-              fillColor: Color.fromRGBO(0, 0, 0, 0.04),
-              floatingLabelBehavior: FloatingLabelBehavior.always,
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Color.fromRGBO(100, 24, 195, 1), width: 2),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(12),
-                ),
-              ),
-              contentPadding: EdgeInsets.symmetric(
-                horizontal: 10,
-                vertical: 10,
-              ),
-            ),
-            useMaterial3: true,
+            //Aquí va el tema
           ),
           routes: {
             "cliente/dashboard": (context) => Container(),
