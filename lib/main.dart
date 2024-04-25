@@ -14,14 +14,36 @@ class TestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => UserProvider())
-      ],
+      providers: [ChangeNotifierProvider(create: (_) => UserProvider())],
       builder: (context, child) {
         return MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            fontFamily: "Inter",
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: const Color.fromRGBO(100, 24, 195, 1),
+            ),
+            inputDecorationTheme: const InputDecorationTheme(
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              filled: true,
+              fillColor: Color.fromRGBO(0, 0, 0, 0.04),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Color.fromRGBO(100, 24, 195, 1), width: 2),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 10,
+              ),
+            ),
             useMaterial3: true,
           ),
           routes: {
